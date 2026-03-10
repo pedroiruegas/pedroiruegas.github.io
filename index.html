@@ -299,15 +299,17 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Reabastecimiento de Inventario (iia_stock_replenish)</h3>
-                <span class="project-badge">Inventario</span>
+                <h3 class="project-title">Sistema de Entrega de Pedidos</h3>
+                <span class="project-badge">Logística</span>
               </div>
+              <img src="assets/images/fesa_entrega.png" alt="Entrega de Pedidos" style="width:100%;border-radius:8px;margin-bottom:1rem;opacity:0.85;">
               <p class="project-desc">
-                Módulo que extiende el proceso estándar de reabastecimiento de Odoo con órdenes personalizadas,
-                botones inteligentes, estados configurables e integración con movimientos de inventario y <code>stock.picking</code>.
+                Módulo que gestiona la entrega de pedidos por zonas desde inventario. Agrupa facturas por zona
+                y fecha, asigna chofer, valida que no se dupliquen entregas y genera hoja de ruta con firma
+                del cliente. Exportación automática a Excel con relación de reparto y cobranza.
               </p>
               <div class="project-tech">
-                <span>Python</span><span>XML Views</span><span>stock.move</span><span>stock.picking</span>
+                <span>Python</span><span>XLSXWriter</span><span>QWeb</span><span>account.move</span><span>stock.picking</span>
               </div>
             </div>
           </div>
