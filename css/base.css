@@ -103,3 +103,30 @@ code {
   padding: 0.1em 0.35em;
   border-radius: 4px;
 }
+.language-switcher {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.language-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+}
+.language-btn:hover {
+  color: var(--text);
+  border-color: var(--text-secondary);
+}
+.language-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
