@@ -7,7 +7,7 @@
 }
 
 @media (max-width: 768px) {
-  .layout { flex-direction: column; }
+  .layout { flex-direction: column; overflow-x: hidden; max-width: 100vw; }
   .panel-left { display: none; }
 
   /* Mobile header */
@@ -117,7 +117,7 @@
   .mobile-hero .panel-email { justify-content: center; }
   .mobile-hero .btn-cv { margin: 0.75rem auto 0; }
 
-  .panel-right { padding: 2rem 1.5rem 2rem; }
+  .panel-right { padding: 2rem 1.5rem 2rem; overflow-x: hidden; max-width: 100vw; }
 
   .stats-row {
     grid-template-columns: repeat(2, 1fr);
