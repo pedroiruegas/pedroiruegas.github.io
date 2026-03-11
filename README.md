@@ -35,7 +35,7 @@ Soy desarrollador especializado en Odoo Enterprise con experiencia en desarrollo
 
 ## Ejecutar local
 
-Abre `index.html` en el navegador. No requiere dependencias.
+Abre en el navegador [pedroiruegas.github.io](https://pedroiruegas.github.io). No requiere dependencias.
 
 ## Contacto
 
@@ -82,7 +82,7 @@ I am a developer specialized in Odoo Enterprise with experience in custom module
 
 ## Run locally
 
-Open `index.html` in the browser. No dependencies required.
+Open in the browser [pedroiruegas.github.io](https://pedroiruegas.github.io). No dependencies required.
 
 ## Contact
 
