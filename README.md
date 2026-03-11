@@ -1,5 +1,14 @@
 # Portafolio de Pedro Iruegas
 
+![Estado](https://img.shields.io/badge/estado-activo-success)
+![HTML5](https://img.shields.io/badge/html5-e34f26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-f7df1e?logo=javascript&logoColor=000000)
+![Python](https://img.shields.io/badge/python-3776AB?logo=python&logoColor=white)
+![Odoo](https://img.shields.io/badge/odoo-714B67?logo=odoo&logoColor=white)
+![i18n](https://img.shields.io/badge/i18n-ES%2FEN-blue)
+![Theme](https://img.shields.io/badge/tema-claro%2Foscuro-4b5563)
+
 Portafolio web personal de Pedro Iruegas, Odoo Developer especializado en Python, OWL, QWeb y personalización de módulos ERP para empresas mexicanas.
 
 ## Sobre mí
@@ -46,6 +55,15 @@ Abre en el navegador [pedroiruegas.github.io](https://pedroiruegas.github.io). N
 ---
 
 # Portfolio of Pedro Iruegas
+
+![Status](https://img.shields.io/badge/status-active-success)
+![HTML5](https://img.shields.io/badge/html5-e34f26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-f7df1e?logo=javascript&logoColor=000000)
+![Python](https://img.shields.io/badge/python-3776AB?logo=python&logoColor=white)
+![Odoo](https://img.shields.io/badge/odoo-714B67?logo=odoo&logoColor=white)
+![i18n](https://img.shields.io/badge/i18n-ES%2FEN-blue)
+![Theme](https://img.shields.io/badge/theme-light%2Fdark-4b5563)
 
 Personal web portfolio of Pedro Iruegas, Odoo Developer specialized in Python, OWL, QWeb and ERP module customization for Mexican companies.
 
