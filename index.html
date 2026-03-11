@@ -33,52 +33,56 @@
 
         <div class="panel-top">
           <h1 class="panel-name">Pedro Iruegas<span class="accent">.</span></h1>
-          <h2 class="panel-title">Odoo Developer</h2>
-          <p class="panel-desc">
+          <h2 class="panel-title" data-i18n="panel_title">Odoo Developer</h2>
+          <p class="panel-desc" data-i18n="panel_desc">
             Especializado en personalización de Odoo Enterprise.
             Módulos Python, OWL, QWeb y soluciones ERP para empresas mexicanas.
           </p>
           <div class="status-badge">
             <span class="status-dot"></span>
-            <span>Disponible para proyectos</span>
+            <span data-i18n="status">Disponible para proyectos</span>
           </div>
           <a href="mailto:iruegaspe@hotmail.com" class="panel-email">
             <i class="fas fa-envelope"></i> iruegaspe@hotmail.com
           </a>
           <a href="assets/certificados/cv_pedro_iruegas.pdf" class="btn-cv" download>
-            <i class="fas fa-download"></i> Descargar CV
+            <i class="fas fa-download"></i> <span data-i18n="btn_cv">Descargar CV</span>
           </a>
         </div>
 
         <nav class="panel-nav" id="panelNav">
           <a href="#about" class="panel-nav-link active" data-section="about">
             <span class="nav-indicator"></span>
-            <span class="nav-text">Sobre mí</span>
+            <span class="nav-text" data-i18n="nav_about">Sobre mí</span>
           </a>
           <a href="#experience" class="panel-nav-link" data-section="experience">
             <span class="nav-indicator"></span>
-            <span class="nav-text">Experiencia</span>
+            <span class="nav-text" data-i18n="nav_experience">Experiencia</span>
           </a>
           <a href="#projects" class="panel-nav-link" data-section="projects">
             <span class="nav-indicator"></span>
-            <span class="nav-text">Proyectos</span>
+            <span class="nav-text" data-i18n="nav_projects">Proyectos</span>
           </a>
           <a href="#skills" class="panel-nav-link" data-section="skills">
             <span class="nav-indicator"></span>
-            <span class="nav-text">Habilidades</span>
+            <span class="nav-text" data-i18n="nav_skills">Habilidades</span>
           </a>
           <a href="#education" class="panel-nav-link" data-section="education">
             <span class="nav-indicator"></span>
-            <span class="nav-text">Formación</span>
+            <span class="nav-text" data-i18n="nav_education">Formación</span>
           </a>
           <a href="#contact" class="panel-nav-link" data-section="contact">
             <span class="nav-indicator"></span>
-            <span class="nav-text">Contacto</span>
+            <span class="nav-text" data-i18n="nav_contact">Contacto</span>
           </a>
         </nav>
 
         <div class="panel-bottom">
           <div class="panel-actions">
+            <div class="language-switcher">
+              <button class="language-btn active" data-lang="es">ES</button>
+              <button class="language-btn" data-lang="en">EN</button>
+            </div>
             <button class="theme-btn" id="themeToggle" title="Toggle theme">
               <i class="fas fa-sun"></i>
             </button>
@@ -102,6 +106,10 @@
     <div class="mobile-header" id="mobileHeader">
       <a href="#" class="logo">PI<span class="accent">.</span></a>
       <div class="mobile-actions">
+        <div class="language-switcher">
+          <button class="language-btn active" data-lang="es">ES</button>
+          <button class="language-btn" data-lang="en">EN</button>
+        </div>
         <button class="theme-btn" id="themeToggleMobile" title="Toggle theme">
           <i class="fas fa-sun"></i>
         </button>
@@ -114,32 +122,32 @@
     <!-- ============ MOBILE NAV OVERLAY ============ -->
     <div class="mobile-nav-overlay" id="mobileNav">
       <nav class="mobile-nav-menu">
-        <a href="#about" class="mobile-nav-link">Sobre mí</a>
-        <a href="#experience" class="mobile-nav-link">Experiencia</a>
-        <a href="#projects" class="mobile-nav-link">Proyectos</a>
-        <a href="#skills" class="mobile-nav-link">Habilidades</a>
-        <a href="#education" class="mobile-nav-link">Formación</a>
-        <a href="#contact" class="mobile-nav-link">Contacto</a>
+        <a href="#about" class="mobile-nav-link" data-i18n="nav_about">Sobre mí</a>
+        <a href="#experience" class="mobile-nav-link" data-i18n="nav_experience">Experiencia</a>
+        <a href="#projects" class="mobile-nav-link" data-i18n="nav_projects">Proyectos</a>
+        <a href="#skills" class="mobile-nav-link" data-i18n="nav_skills">Habilidades</a>
+        <a href="#education" class="mobile-nav-link" data-i18n="nav_education">Formación</a>
+        <a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Contacto</a>
       </nav>
     </div>
 
     <!-- ============ MOBILE HERO ============ -->
     <div class="mobile-hero">
       <h1 class="mobile-hero-name">Pedro Iruegas<span class="accent">.</span></h1>
-      <h2 class="mobile-hero-title">Odoo Developer</h2>
-      <p class="mobile-hero-desc">
+      <h2 class="mobile-hero-title" data-i18n="panel_title">Odoo Developer</h2>
+      <p class="mobile-hero-desc" data-i18n="panel_desc">
         Especializado en personalización de Odoo Enterprise.
         Módulos Python, OWL, QWeb y soluciones ERP para empresas mexicanas.
       </p>
       <div class="status-badge">
         <span class="status-dot"></span>
-        <span>Disponible para proyectos</span>
+        <span data-i18n="status">Disponible para proyectos</span>
       </div>
       <a href="mailto:iruegaspe@hotmail.com" class="panel-email">
         <i class="fas fa-envelope"></i> iruegaspe@hotmail.com
       </a>
       <a href="assets/certificados/cv_pedro_iruegas.pdf" class="btn-cv" download>
-        <i class="fas fa-download"></i> Descargar CV
+        <i class="fas fa-download"></i> <span data-i18n="btn_cv">Descargar CV</span>
       </a>
     </div>
 
@@ -149,13 +157,13 @@
       <!-- ABOUT -->
       <section id="about" class="content-section">
         <div class="section-content">
-          <p class="content-text">
+          <p class="content-text" data-i18n="about_p1">
             Soy estudiante de <strong>Ingeniería en Tecnologías de Software</strong> en la UANL (10mo semestre),
             actualmente trabajando como <strong>Consultor Técnico Odoo</strong> en Integra Informática Administrativa.
             Me especializo en el desarrollo de módulos personalizados para Odoo 17, 18 y 19, resolviendo
             problemas reales de contabilidad, cobranza, nómina e inventario para empresas mexicanas.
           </p>
-          <p class="content-text">
+          <p class="content-text" data-i18n="about_p2">
             Mi enfoque está en entender el proceso de negocio antes de escribir código: cada módulo que desarrollo
             automatiza algo que antes se hacía a mano. Trabajo con Python en el backend, OWL en el frontend y
             QWeb para reportes, siempre dentro del ecosistema Odoo Enterprise.
@@ -164,19 +172,19 @@
           <div class="stats-row">
             <div class="stat-item">
               <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
-              <p class="stat-label">Proyectos Odoo</p>
+              <p class="stat-label" data-i18n="stat_projects">Proyectos Odoo</p>
             </div>
             <div class="stat-item">
               <span class="stat-number" data-target="7">0</span><span class="stat-suffix"></span>
-              <p class="stat-label">Bancos Integrados</p>
+              <p class="stat-label" data-i18n="stat_banks">Bancos Integrados</p>
             </div>
             <div class="stat-item">
               <span class="stat-number" data-target="6">0</span><span class="stat-suffix">+</span>
-              <p class="stat-label">Empresas Atendidas</p>
+              <p class="stat-label" data-i18n="stat_companies">Empresas Atendidas</p>
             </div>
             <div class="stat-item">
               <span class="stat-number" data-target="4">0</span><span class="stat-suffix"></span>
-              <p class="stat-label">Versiones Odoo</p>
+              <p class="stat-label" data-i18n="stat_versions">Versiones Odoo</p>
             </div>
           </div>
         </div>
@@ -184,15 +192,15 @@
 
       <!-- EXPERIENCE -->
       <section id="experience" class="content-section">
-        <h2 class="section-heading">Experiencia Profesional</h2>
+        <h2 class="section-heading" data-i18n="exp_title">Experiencia Profesional</h2>
 
         <div class="experience-card">
           <div class="exp-accent"></div>
           <div class="exp-content">
             <div class="exp-header">
-              <h3>Consultor Técnico Odoo</h3>
-              <p class="exp-company-line">Integra Informática Administrativa &mdash; Feb 2024 · Actualidad</p>
-              <p class="exp-subtitle">Odoo 16 ·17 · 18 · 19 · Python · OWL · QWeb · PostgreSQL</p>
+              <h3 data-i18n="exp_role">Consultor Técnico Odoo</h3>
+              <p class="exp-company-line" data-i18n="exp_company">Integra Informática Administrativa — Feb 2024 · Actualidad</p>
+              <p class="exp-subtitle" data-i18n="exp_subtitle">Odoo 16 · 17 · 18 · 19 · Python · OWL · QWeb · PostgreSQL</p>
             </div>
 
             <div class="exp-metrics">
@@ -203,23 +211,23 @@
             </div>
 
             <ul class="exp-list">
-              <li>Desarrollo e implementación de módulos personalizados en Odoo Enterprise según los requerimientos específicos de cada cliente.</li>
-              <li>Sistema de dispersión de nómina compatible con 7 bancos mexicanos (Banorte, BBVA, Santander, BanBajío, Banamex, HSBC, Scotiabank) con generación de archivos TXT bancarios.</li>
-              <li>Módulo de reporte Follow-Up con cálculo dinámico de días vencidos, integrado al motor account_reports de Odoo.</li>
+              <li data-i18n="exp_li1">Desarrollo e implementación de módulos personalizados en Odoo Enterprise según los requerimientos específicos de cada cliente.</li>
+              <li data-i18n="exp_li2">Sistema de dispersión de nómina compatible con 7 bancos mexicanos (Banorte, BBVA, Santander, BanBajío, Banamex, HSBC, Scotiabank) con generación de archivos TXT bancarios.</li>
+              <li data-i18n="exp_li3">Módulo de reporte Follow-Up con cálculo dinámico de días vencidos, integrado al motor account_reports de Odoo.</li>
             </ul>
 
             <ul class="exp-list exp-details">
-              <li>Wizard de comisiones por cobranza: cálculo basado en pagos recibidos (no en facturación), exportación automática a Excel con XLSXWriter.</li>
-              <li>Sistema de reabastecimiento de inventario personalizado con órdenes configurables, botones inteligentes y estados custom.</li>
-              <li>Validaciones para cancelación de pedidos de venta: previene cancelaciones cuando existen entregas, facturas o pagos registrados.</li>
-              <li>Personalización de reportes QWeb de facturas CFDI con layout corporativo e información adicional del SAT.</li>
-              <li>Integración con Google Drive para almacenamiento automático de documentos desde Odoo.</li>
-              <li>Suite de reportes financieros en Excel: compras, ventas, cobranza e inventario con consultas SQL optimizadas.</li>
-              <li>Gestión y resolución de tickets de clientes, carga masiva de datos y administración de inventarios en Odoo.</li>
+              <li data-i18n="exp_li4">Wizard de comisiones por cobranza: cálculo basado en pagos recibidos (no en facturación), exportación automática a Excel con XLSXWriter.</li>
+              <li data-i18n="exp_li5">Sistema de reabastecimiento de inventario personalizado con órdenes configurables, botones inteligentes y estados custom.</li>
+              <li data-i18n="exp_li6">Validaciones para cancelación de pedidos de venta: previene cancelaciones cuando existen entregas, facturas o pagos registrados.</li>
+              <li data-i18n="exp_li7">Personalización de reportes QWeb de facturas CFDI con layout corporativo e información adicional del SAT.</li>
+              <li data-i18n="exp_li8">Integración con Google Drive para almacenamiento automático de documentos desde Odoo.</li>
+              <li data-i18n="exp_li9">Suite de reportes financieros en Excel: compras, ventas, cobranza e inventario con consultas SQL optimizadas.</li>
+              <li data-i18n="exp_li10">Gestión y resolución de tickets de clientes, carga masiva de datos y administración de inventarios en Odoo.</li>
             </ul>
 
             <button class="expand-toggle">
-              <span>Ver más</span>
+              <span data-i18n="show_more">Ver más</span>
               <i class="fas fa-chevron-down"></i>
             </button>
 
@@ -234,7 +242,7 @@
 
       <!-- PROJECTS -->
       <section id="projects" class="content-section">
-        <h2 class="section-heading">Proyectos Destacados</h2>
+        <h2 class="section-heading" data-i18n="projects_title">Proyectos Destacados</h2>
 
         <div class="projects-list">
 
@@ -242,13 +250,13 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Reporte Follow-Up · Días Vencidos</h3>
-                <span class="project-badge">Cobranza</span>
+                <h3 class="project-title" data-i18n="p1_title">Reporte Follow-Up · Días Vencidos</h3>
+                <span class="project-badge" data-i18n="p1_badge">Cobranza</span>
               </div>
-              <p class="project-desc">
+              <p class="project-desc" data-i18n="p1_desc">
                 El reporte estándar de Odoo no mostraba los días exactos de vencimiento de cada factura.
-                Módulo que agrega la columna "Días Vencidos" calculada dinámicamente con base en <code>date_maturity</code>,
-                integrada al motor <code>account_reports</code>.
+                Módulo que agrega la columna "Días Vencidos" calculada dinámicamente con base en date_maturity,
+                integrada al motor account_reports.
               </p>
               <div class="project-tech">
                 <span>Python</span><span>OWL</span><span>QWeb</span><span>account_followup</span><span>Odoo 18</span>
@@ -260,10 +268,10 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Sistema de Comisiones por Cobranza</h3>
-                <span class="project-badge">Ventas</span>
+                <h3 class="project-title" data-i18n="p2_title">Sistema de Comisiones por Cobranza</h3>
+                <span class="project-badge" data-i18n="p2_badge">Ventas</span>
               </div>
-              <p class="project-desc">
+              <p class="project-desc" data-i18n="p2_desc">
                 Wizard que calcula comisiones de vendedores basadas en pagos recibidos — no en facturación —
                 con filtros por rango de fechas, identificación de pagos conciliados y base sin impuestos.
                 Exportación automática a Excel.
@@ -278,10 +286,10 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Dispersión de Nómina — Multi-Banco México</h3>
-                <span class="project-badge">Nómina</span>
+                <h3 class="project-title" data-i18n="p3_title">Dispersión de Nómina — Multi-Banco México</h3>
+                <span class="project-badge" data-i18n="p3_badge">Nómina</span>
               </div>
-              <p class="project-desc">
+              <p class="project-desc" data-i18n="p3_desc">
                 Módulos para generar archivos de dispersión bancaria compatibles con 7 bancos mexicanos.
                 Soporte para CLABE, cuenta y tarjeta. Generación automática de layout bancario en TXT y PDF.
               </p>
@@ -299,10 +307,11 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Sistema de Entrega de Pedidos</h3>
-                <span class="project-badge">Logística</span>
+                <h3 class="project-title" data-i18n="p4_title">Sistema de Entrega de Pedidos</h3>
+                <span class="project-badge" data-i18n="p4_badge">Logística</span>
               </div>
-              <p class="project-desc">
+              <img src="assets/images/fesa_entrega.png" alt="Entrega de Pedidos" style="width:100%;border-radius:8px;margin-bottom:1rem;opacity:0.85;">
+              <p class="project-desc" data-i18n="p4_desc">
                 Módulo que gestiona la entrega de pedidos por zonas desde inventario. Agrupa facturas por zona
                 y fecha, asigna chofer, valida que no se dupliquen entregas y genera hoja de ruta con firma
                 del cliente. Exportación automática a Excel con relación de reparto y cobranza.
@@ -317,10 +326,10 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Control de Cancelación de Pedidos</h3>
-                <span class="project-badge">Ventas</span>
+                <h3 class="project-title" data-i18n="p5_title">Control de Cancelación de Pedidos</h3>
+                <span class="project-badge" data-i18n="p5_badge">Ventas</span>
               </div>
-              <p class="project-desc">
+              <p class="project-desc" data-i18n="p5_desc">
                 Validaciones que bloquean la cancelación de pedidos de venta cuando ya existen
                 entregas realizadas, facturas emitidas o pagos registrados, protegiendo la integridad del flujo comercial.
               </p>
@@ -334,10 +343,10 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Reportes CFDI Personalizados</h3>
-                <span class="project-badge">Fiscal</span>
+                <h3 class="project-title" data-i18n="p6_title">Reportes CFDI Personalizados</h3>
+                <span class="project-badge" data-i18n="p6_badge">Fiscal</span>
               </div>
-              <p class="project-desc">
+              <p class="project-desc" data-i18n="p6_desc">
                 Personalización del reporte QWeb de facturas con layout corporativo, tabla de productos ajustada,
                 información SAT completa y campos adicionales para cumplimiento fiscal mexicano.
               </p>
@@ -351,10 +360,10 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Integración Google Drive + Odoo</h3>
-                <span class="project-badge">Cloud</span>
+                <h3 class="project-title" data-i18n="p7_title">Integración Google Drive + Odoo</h3>
+                <span class="project-badge" data-i18n="p7_badge">Cloud</span>
               </div>
-              <p class="project-desc">
+              <p class="project-desc" data-i18n="p7_desc">
                 Integración entre Odoo y Google Drive para almacenamiento automático de documentos y adjuntos
                 generados desde el ERP, sin intervención manual del usuario.
               </p>
@@ -368,10 +377,10 @@
           <div class="project-card">
             <div class="project-body">
               <div class="project-top">
-                <h3 class="project-title">Suite de Reportes Financieros en Excel</h3>
-                <span class="project-badge">Analytics</span>
+                <h3 class="project-title" data-i18n="p8_title">Suite de Reportes Financieros en Excel</h3>
+                <span class="project-badge" data-i18n="p8_badge">Analytics</span>
               </div>
-              <p class="project-desc">
+              <p class="project-desc" data-i18n="p8_desc">
                 Múltiples wizards para generar reportes Excel de compras, ventas, cobranza e inventario.
                 Consultas SQL optimizadas directamente en PostgreSQL para reportes de alto volumen.
               </p>
@@ -386,10 +395,10 @@
 
       <!-- SKILLS -->
       <section id="skills" class="content-section">
-        <h2 class="section-heading">Habilidades Técnicas</h2>
+        <h2 class="section-heading" data-i18n="skills_title">Habilidades Técnicas</h2>
 
         <div class="skills-group">
-          <h3 class="skills-category">ERP & Backend</h3>
+          <h3 class="skills-category" data-i18n="skills_cat1">ERP & Backend</h3>
           <div class="skills-chips">
             <span class="skill-chip"><i class="fas fa-cube"></i> Odoo 16/17/18/19</span>
             <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
@@ -401,7 +410,7 @@
         </div>
 
         <div class="skills-group">
-          <h3 class="skills-category">Frontend & Vistas</h3>
+          <h3 class="skills-category" data-i18n="skills_cat2">Frontend & Vistas</h3>
           <div class="skills-chips">
             <span class="skill-chip"><i class="fas fa-feather"></i> OWL</span>
             <span class="skill-chip"><i class="fab fa-js"></i> JavaScript</span>
@@ -411,7 +420,7 @@
         </div>
 
         <div class="skills-group">
-          <h3 class="skills-category">Otros Lenguajes</h3>
+          <h3 class="skills-category" data-i18n="skills_cat3">Otros Lenguajes</h3>
           <div class="skills-chips">
             <span class="skill-chip"><i class="fas fa-code"></i> C/C++</span>
             <span class="skill-chip"><i class="fab fa-java"></i> Java</span>
@@ -419,7 +428,7 @@
         </div>
 
         <div class="skills-group">
-          <h3 class="skills-category">Herramientas & Infraestructura</h3>
+          <h3 class="skills-category" data-i18n="skills_cat4">Herramientas & Infraestructura</h3>
           <div class="skills-chips">
             <span class="skill-chip"><i class="fab fa-git-alt"></i> Git</span>
             <span class="skill-chip"><i class="fab fa-github"></i> GitHub</span>
@@ -434,19 +443,19 @@
 
       <!-- EDUCATION -->
       <section id="education" class="content-section">
-        <h2 class="section-heading">Formación</h2>
+        <h2 class="section-heading" data-i18n="education_title">Formación</h2>
 
         <div class="education-card">
           <div class="education-header">
             <div class="education-details">
-              <h3>Ingeniería en Tecnologías de Software</h3>
-              <p class="education-institution">Universidad Autónoma de Nuevo León · FIME</p>
-              <span class="education-period">Ago 2021 — Actualidad · 10mo semestre</span>
+              <h3 data-i18n="edu_degree">Ingeniería en Tecnologías de Software</h3>
+              <p class="education-institution" data-i18n="edu_university">Universidad Autónoma de Nuevo León · FIME</p>
+              <span class="education-period" data-i18n="edu_period">Ago 2021 — Actualidad · 10mo semestre</span>
             </div>
           </div>
         </div>
 
-        <h3 class="subsection-heading">Empresas atendidas</h3>
+        <h3 class="subsection-heading" data-i18n="clients_heading">Empresas atendidas</h3>
         <div class="clients-grid">
           <div class="client-chip"><i class="fas fa-building"></i> Refaccionaria Casa Villarreal</div>
           <div class="client-chip"><i class="fas fa-building"></i> Forrajera Elizondo</div>
@@ -458,20 +467,20 @@
           <div class="client-chip"><i class="fas fa-building"></i> Pyvisa</div>
         </div>
 
-        <h3 class="subsection-heading">Idiomas</h3>
+        <h3 class="subsection-heading" data-i18n="languages_heading">Idiomas</h3>
         <div class="certifications-list">
           <div class="cert-card">
             <div class="cert-icon"><i class="fas fa-language"></i></div>
             <div class="cert-info">
-              <h4>Español</h4>
-              <span class="cert-year">Nativo</span>
+              <h4 data-i18n="lang_spanish">Español</h4>
+              <span class="cert-year" data-i18n="lang_spanish_level">Nativo</span>
             </div>
           </div>
           <div class="cert-card">
             <div class="cert-icon"><i class="fas fa-language"></i></div>
             <div class="cert-info">
-              <h4>Inglés</h4>
-              <span class="cert-year">Intermedio-Avanzado (B2)</span>
+              <h4 data-i18n="lang_english">Inglés</h4>
+              <span class="cert-year" data-i18n="lang_english_level">Intermedio-Avanzado (B2)</span>
             </div>
           </div>
         </div>
@@ -479,9 +488,9 @@
 
       <!-- CONTACT -->
       <section id="contact" class="content-section">
-        <h2 class="section-heading">Trabajemos juntos</h2>
+        <h2 class="section-heading" data-i18n="contact_title">Trabajemos juntos</h2>
 
-        <p class="content-text">
+        <p class="content-text" data-i18n="contact_desc">
           ¿Tienes un proceso que quieres automatizar en Odoo? ¿Necesitas un módulo personalizado?
           Escríbeme, con gusto platicamos.
         </p>
@@ -507,24 +516,24 @@
         <form class="contact-form" id="form-contacto" action="https://formspree.io/f/xbdzgrbg" method="POST">
           <div class="form-row">
             <div class="form-group">
-              <label for="nombre">Nombre</label>
+              <label for="nombre" data-i18n="form_name">Nombre</label>
               <input type="text" id="nombre" name="name" required>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email" data-i18n="form_email">Email</label>
               <input type="email" id="email" name="email" required>
             </div>
           </div>
           <div class="form-group">
-            <label for="asunto">Asunto</label>
+            <label for="asunto" data-i18n="form_subject">Asunto</label>
             <input type="text" id="asunto" name="affair" required>
           </div>
           <div class="form-group">
-            <label for="mensaje">Mensaje</label>
+            <label for="mensaje" data-i18n="form_message">Mensaje</label>
             <textarea id="mensaje" name="message" rows="5" required></textarea>
           </div>
           <button type="submit" class="btn-submit">
-            <span>Enviar Mensaje</span>
+            <span data-i18n="contact_send">Enviar Mensaje</span>
           </button>
         </form>
       </section>
@@ -544,11 +553,11 @@
         </div>
         <p class="copyright"></p>
       </footer>
-      <script>document.querySelector('.copyright').textContent = `© ${new Date().getFullYear()} Pedro Iruegas. Todos los derechos reservados.`;</script>
 
     </main>
   </div>
 
+  <script src="js/idiomas.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/interactions.js"></script>
