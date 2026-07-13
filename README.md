@@ -13,7 +13,7 @@ Portafolio web personal de Pedro Iruegas, Odoo Developer especializado en Python
 
 ## Sobre mí
 
-Soy desarrollador especializado en Odoo Enterprise con experiencia en desarrollo de módulos personalizados, automatización de procesos y soluciones ERP a medida. He trabajado con Python, PostgreSQL y OWL, enfocándome en entender el proceso de negocio antes de escribir código. Actualmente curso el 10mo semestre de Ingeniería en Tecnologías de Software en la UANL.
+Soy desarrollador especializado en Odoo Enterprise con experiencia en desarrollo de módulos personalizados, automatización de procesos y soluciones ERP a medida. He trabajado con Python, PostgreSQL y OWL, enfocándome en entender el proceso de negocio antes de escribir código. Soy Ingeniero en Tecnologías de Software egresado de la UANL.
 
 ## Lo que incluye
 
@@ -32,8 +32,9 @@ Soy desarrollador especializado en Odoo Enterprise con experiencia en desarrollo
 ## Habilidades
 
 - **ERP:** Odoo 16/17/18/19, módulos custom, ORM, OWL, QWeb.
-- **Backend:** Python, PostgreSQL, XLSXWriter, CFDI México.
-- **Integraciones:** Google Drive API, dispersión bancaria multi-banco.
+- **Backend:** Python, PostgreSQL, XLSXWriter.
+- **Fiscal México:** CFDI 4.0, l10n_mx_edi, timbrado, complementos de pago (REP), PUE/PPD, bóveda fiscal.
+- **Integraciones:** Google Drive API, dispersión bancaria multi-banco, APIs REST.
 - **Herramientas:** Git, GitHub, Linux, Nginx, Odoo.sh.
 
 ## Estructura
@@ -69,7 +70,7 @@ Personal web portfolio of Pedro Iruegas, Odoo Developer specialized in Python, O
 
 ## About me
 
-I am a developer specialized in Odoo Enterprise with experience in custom module development, process automation and tailored ERP solutions. I have worked with Python, PostgreSQL and OWL, focusing on understanding the business process before writing code. Currently finishing my degree in Software Technology Engineering at UANL.
+I am a developer specialized in Odoo Enterprise with experience in custom module development, process automation and tailored ERP solutions. I have worked with Python, PostgreSQL and OWL, focusing on understanding the business process before writing code. I hold a degree in Software Technology Engineering from UANL.
 
 ## What is included
 
@@ -88,8 +89,9 @@ I am a developer specialized in Odoo Enterprise with experience in custom module
 ## Skills
 
 - **ERP:** Odoo 16/17/18/19, custom modules, ORM, OWL, QWeb.
-- **Backend:** Python, PostgreSQL, XLSXWriter, CFDI México.
-- **Integrations:** Google Drive API, multi-bank payroll disbursement.
+- **Backend:** Python, PostgreSQL, XLSXWriter.
+- **Mexican tax compliance:** CFDI 4.0, l10n_mx_edi, stamping, payment complements (REP), PUE/PPD, tax vault.
+- **Integrations:** Google Drive API, multi-bank payroll disbursement, REST APIs.
 - **Tools:** Git, GitHub, Linux, Nginx, Odoo.sh.
 
 ## Structure
@@ -108,4 +110,4 @@ Open in the browser [pedroiruegas.github.io](https://pedroiruegas.github.io). No
 - GitHub: https://github.com/pedroiruegas
 - LinkedIn: https://www.linkedin.com/in/pedro-iruegas-a8060035b/
 
-© 2025 Pedro Iruegas
+© 2026 Pedro Iruegas
