@@ -8,8 +8,8 @@
   <meta name="author" content="Pedro Iruegas">
   <link rel="canonical" href="https://pedroiruegas.github.io/">
 
-  <!-- Favicon (SVG inline, no requiere archivo extra) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23111827'/><text x='50' y='68' font-family='Helvetica,Arial,sans-serif' font-size='48' font-weight='bold' fill='%23ffffff' text-anchor='middle'>PI</text></svg>">
+  <!-- Favicon (SVG inline, estilo consola ámbar) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230b0c0e'/><rect x='8' y='8' width='84' height='84' fill='none' stroke='%23f2ac18' stroke-width='5'/><text x='50' y='68' font-family='Courier New,monospace' font-size='42' font-weight='bold' fill='%23f2ac18' text-anchor='middle'>PI</text></svg>">
 
   <!-- Open Graph / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website">
@@ -24,8 +24,9 @@
   <meta name="twitter:title" content="Pedro Iruegas | Odoo Developer">
   <meta name="twitter:description" content="Desarrollador Odoo. Módulos custom en Python/XML, CFDI 4.0, reportes QWeb y migraciones v16–v19 para empresas mexicanas.">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,700&family=IBM+Plex+Mono:wght@400;500;600&family=VT323&display=swap" rel="stylesheet">
   <link href="css/base.css" rel="stylesheet">
   <link href="css/layout.css" rel="stylesheet">
   <link href="css/components.css" rel="stylesheet">
@@ -33,16 +34,31 @@
 </head>
 <body>
 
-  <!-- Loading Screen -->
+  <!-- Loading Screen : self test de consola -->
   <div class="loader" id="loader">
     <div class="loader-content">
-      <div class="loader-logo">PI<span class="accent">.</span></div>
+      <div class="loader-logo">PEDRO IRUEGAS<span class="tm">&reg;</span></div>
+      <div class="loader-lines">
+        <span>SELF TEST ............ OK</span>
+        <span>LAMP STRIKE .......... OK</span>
+        <span>LOADING SHOW: PORTFOLIO_2026</span>
+      </div>
       <div class="loader-bar"><div class="loader-progress"></div></div>
     </div>
   </div>
 
+  <!-- CRT overlays -->
+  <div class="crt-scanlines" aria-hidden="true"></div>
+  <div class="crt-vignette" aria-hidden="true"></div>
+
   <!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- LEDs del bisel -->
+  <div class="bezel-leds" aria-hidden="true">
+    <span class="led"></span>
+    <span class="led"></span>
+  </div>
 
   <div class="layout">
 
@@ -50,51 +66,68 @@
     <header class="panel-left" id="panelLeft">
       <div class="panel-left-inner">
 
-        <div class="panel-top">
-          <h1 class="panel-name">Pedro Iruegas<span class="accent">.</span></h1>
-          <h2 class="panel-title" data-i18n="panel_title">Odoo Developer</h2>
+        <div class="console-masthead">
+          <div class="console-brand">PEDRO IRUEGAS<span class="tm">&reg;</span></div>
+          <h1 class="console-mode">SHOW LOCAL &mdash; AUTO MODE</h1>
+        </div>
+
+        <div class="crt-box show-info">
+          <span class="crt-box-label">SHOW INFORMATION</span>
+          <div class="show-info-row"><span class="show-info-key">OPERATOR:</span> PEDRO IRUEGAS</div>
+          <div class="show-info-row"><span class="show-info-key">TITLE:</span> <span data-i18n="panel_title">Odoo Developer</span></div>
           <p class="panel-desc" data-i18n="panel_desc">
             Especializado en personalización de Odoo Enterprise.
             Módulos Python, OWL, QWeb y soluciones ERP para empresas mexicanas.
           </p>
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            <span data-i18n="status">Disponible para proyectos</span>
-          </div>
-          <a href="mailto:iruegaspe@hotmail.com" class="panel-email">
-            <i class="fas fa-envelope"></i> iruegaspe@hotmail.com
-          </a>
-          <a href="assets/certificados/cv_pedro_iruegas.pdf" class="btn-cv" download>
-            <i class="fas fa-download"></i> <span data-i18n="btn_cv">Descargar CV</span>
-          </a>
         </div>
+
+        <div class="status-bar">
+          <span class="status-key">STATUS:</span>
+          <span data-i18n="status">Disponible para proyectos</span>
+        </div>
+
+        <ul class="system-flags" aria-hidden="true">
+          <li><span class="flag-box"></span> SPARE</li>
+          <li><span class="flag-box"></span> REMOTE START BIT</li>
+          <li class="on"><span class="flag-box filled"></span> IN SHOW POSITION</li>
+          <li class="on"><span class="flag-box filled"></span> REEL UNIT READY</li>
+          <li class="on"><span class="flag-box filled"></span> SYSTEM READY</li>
+        </ul>
 
         <nav class="panel-nav" id="panelNav">
           <a href="#about" class="panel-nav-link active" data-section="about">
-            <span class="nav-indicator"></span>
             <span class="nav-text" data-i18n="nav_about">Sobre mí</span>
           </a>
           <a href="#experience" class="panel-nav-link" data-section="experience">
-            <span class="nav-indicator"></span>
             <span class="nav-text" data-i18n="nav_experience">Experiencia</span>
           </a>
           <a href="#projects" class="panel-nav-link" data-section="projects">
-            <span class="nav-indicator"></span>
             <span class="nav-text" data-i18n="nav_projects">Proyectos</span>
           </a>
           <a href="#skills" class="panel-nav-link" data-section="skills">
-            <span class="nav-indicator"></span>
             <span class="nav-text" data-i18n="nav_skills">Habilidades</span>
           </a>
           <a href="#education" class="panel-nav-link" data-section="education">
-            <span class="nav-indicator"></span>
             <span class="nav-text" data-i18n="nav_education">Formación</span>
           </a>
           <a href="#contact" class="panel-nav-link" data-section="contact">
-            <span class="nav-indicator"></span>
             <span class="nav-text" data-i18n="nav_contact">Contacto</span>
           </a>
         </nav>
+
+        <div class="remote-banner">
+          <span class="blink">**</span>
+          <span class="remote-banner-text" data-i18n="status">Disponible para proyectos</span>
+          <span class="blink">**</span>
+        </div>
+
+        <div class="crt-box clock-box">
+          <span class="crt-box-label">DATE / TIME</span>
+          <div class="clock-readout">
+            <span id="consoleDate">--/--/--</span>
+            <span id="consoleTime">--:--:--</span>
+          </div>
+        </div>
 
         <div class="panel-bottom">
           <div class="panel-actions">
@@ -102,20 +135,18 @@
               <button class="language-btn active" data-lang="es">ES</button>
               <button class="language-btn" data-lang="en">EN</button>
             </div>
-            <button class="theme-btn" id="themeToggle" title="Toggle theme">
-              <i class="fas fa-sun"></i>
+            <button class="theme-btn" id="themeToggle" title="Amber / Green phosphor">
+              PHOSPHOR
             </button>
           </div>
+          <a href="mailto:iruegaspe@hotmail.com" class="panel-email">iruegaspe@hotmail.com</a>
+          <a href="assets/certificados/cv_pedro_iruegas.pdf" class="btn-cv" download>
+            <span data-i18n="btn_cv">Descargar CV</span> &#8595;
+          </a>
           <div class="panel-social">
-            <a href="https://github.com/pedroiruegas" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:iruegaspe@hotmail.com" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/pedro-iruegas-a8060035b/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+            <a href="https://github.com/pedroiruegas" target="_blank" aria-label="GitHub">GITHUB</a>
+            <a href="mailto:iruegaspe@hotmail.com" aria-label="Email">EMAIL</a>
+            <a href="https://www.linkedin.com/in/pedro-iruegas-a8060035b/" target="_blank" aria-label="LinkedIn">LINKEDIN</a>
           </div>
         </div>
       </div>
@@ -123,18 +154,14 @@
 
     <!-- ============ MOBILE HEADER ============ -->
     <div class="mobile-header" id="mobileHeader">
-      <a href="#" class="logo">PI<span class="accent">.</span></a>
+      <a href="#" class="logo">PI<span class="tm">&reg;</span></a>
       <div class="mobile-actions">
         <div class="language-switcher">
           <button class="language-btn active" data-lang="es">ES</button>
           <button class="language-btn" data-lang="en">EN</button>
         </div>
-        <button class="theme-btn" id="themeToggleMobile" title="Toggle theme">
-          <i class="fas fa-sun"></i>
-        </button>
-        <button class="hamburger" id="hamburger">
-          <i class="fas fa-bars"></i>
-        </button>
+        <button class="theme-btn" id="themeToggleMobile" title="Amber / Green phosphor">PHOS</button>
+        <button class="hamburger" id="hamburger">MENU</button>
       </div>
     </div>
 
@@ -152,21 +179,26 @@
 
     <!-- ============ MOBILE HERO ============ -->
     <div class="mobile-hero">
-      <h1 class="mobile-hero-name">Pedro Iruegas<span class="accent">.</span></h1>
-      <h2 class="mobile-hero-title" data-i18n="panel_title">Odoo Developer</h2>
-      <p class="mobile-hero-desc" data-i18n="panel_desc">
-        Especializado en personalización de Odoo Enterprise.
-        Módulos Python, OWL, QWeb y soluciones ERP para empresas mexicanas.
-      </p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
+      <div class="console-masthead">
+        <div class="console-brand">PEDRO IRUEGAS<span class="tm">&reg;</span></div>
+        <h1 class="console-mode">SHOW LOCAL &mdash; AUTO MODE</h1>
+      </div>
+      <div class="crt-box show-info">
+        <span class="crt-box-label">SHOW INFORMATION</span>
+        <div class="show-info-row"><span class="show-info-key">OPERATOR:</span> PEDRO IRUEGAS</div>
+        <div class="show-info-row"><span class="show-info-key">TITLE:</span> <span data-i18n="panel_title">Odoo Developer</span></div>
+        <p class="panel-desc" data-i18n="panel_desc">
+          Especializado en personalización de Odoo Enterprise.
+          Módulos Python, OWL, QWeb y soluciones ERP para empresas mexicanas.
+        </p>
+      </div>
+      <div class="status-bar">
+        <span class="status-key">STATUS:</span>
         <span data-i18n="status">Disponible para proyectos</span>
       </div>
-      <a href="mailto:iruegaspe@hotmail.com" class="panel-email">
-        <i class="fas fa-envelope"></i> iruegaspe@hotmail.com
-      </a>
+      <a href="mailto:iruegaspe@hotmail.com" class="panel-email">iruegaspe@hotmail.com</a>
       <a href="assets/certificados/cv_pedro_iruegas.pdf" class="btn-cv" download>
-        <i class="fas fa-download"></i> <span data-i18n="btn_cv">Descargar CV</span>
+        <span data-i18n="btn_cv">Descargar CV</span> &#8595;
       </a>
     </div>
 
@@ -175,35 +207,46 @@
 
       <!-- ABOUT -->
       <section id="about" class="content-section">
-        <div class="section-content">
-          <p class="content-text" data-i18n="about_p1">
-            Soy <strong>Ingeniero en Tecnologías de Software</strong> egresado de la UANL, actualmente
-            <strong>Desarrollador / Consultor Odoo</strong> en Integra Informática Administrativa.
-            Me especializo en el desarrollo de módulos personalizados para Odoo 16, 17, 18 y 19, resolviendo
-            problemas reales de contabilidad, cobranza, nómina e inventario para empresas mexicanas.
-          </p>
-          <p class="content-text" data-i18n="about_p2">
-            Mi enfoque está en entender el proceso de negocio antes de escribir código: cada módulo que desarrollo
-            automatiza algo que antes se hacía a mano. Trabajo con Python en el backend, OWL en el frontend y
-            QWeb para reportes, siempre dentro del ecosistema Odoo Enterprise.
-          </p>
+        <div class="crt-box section-box">
+          <span class="crt-box-label" data-i18n="nav_about">Sobre mí</span>
+          <div class="section-content">
+            <p class="content-text" data-i18n="about_p1">
+              Soy <strong>Ingeniero en Tecnologías de Software</strong> egresado de la UANL, actualmente
+              <strong>Desarrollador / Consultor Odoo</strong> en Integra Informática Administrativa.
+              Me especializo en el desarrollo de módulos personalizados para Odoo 16, 17, 18 y 19, resolviendo
+              problemas reales de contabilidad, cobranza, nómina e inventario para empresas mexicanas.
+            </p>
+            <p class="content-text" data-i18n="about_p2">
+              Mi enfoque está en entender el proceso de negocio antes de escribir código: cada módulo que desarrollo
+              automatiza algo que antes se hacía a mano. Trabajo con Python en el backend, OWL en el frontend y
+              QWeb para reportes, siempre dentro del ecosistema Odoo Enterprise.
+            </p>
 
-          <div class="stats-row">
-            <div class="stat-item">
-              <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
-              <p class="stat-label" data-i18n="stat_projects">Proyectos Odoo</p>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="7">0</span><span class="stat-suffix"></span>
-              <p class="stat-label" data-i18n="stat_banks">Bancos Integrados</p>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="6">0</span><span class="stat-suffix">+</span>
-              <p class="stat-label" data-i18n="stat_companies">Empresas Atendidas</p>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="4">0</span><span class="stat-suffix"></span>
-              <p class="stat-label" data-i18n="stat_versions">Versiones Odoo</p>
+            <div class="stats-row">
+              <div class="stat-item crt-box">
+                <span class="crt-box-label" data-i18n="stat_projects">Proyectos Odoo</span>
+                <div class="stat-readout">
+                  <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
+                </div>
+              </div>
+              <div class="stat-item crt-box">
+                <span class="crt-box-label" data-i18n="stat_banks">Bancos Integrados</span>
+                <div class="stat-readout">
+                  <span class="stat-number" data-target="7">0</span><span class="stat-suffix"></span>
+                </div>
+              </div>
+              <div class="stat-item crt-box">
+                <span class="crt-box-label" data-i18n="stat_companies">Empresas Atendidas</span>
+                <div class="stat-readout">
+                  <span class="stat-number" data-target="6">0</span><span class="stat-suffix">+</span>
+                </div>
+              </div>
+              <div class="stat-item crt-box">
+                <span class="crt-box-label" data-i18n="stat_versions">Versiones Odoo</span>
+                <div class="stat-readout">
+                  <span class="stat-number" data-target="4">0</span><span class="stat-suffix"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -213,8 +256,8 @@
       <section id="experience" class="content-section">
         <h2 class="section-heading" data-i18n="exp_title">Experiencia Profesional</h2>
 
-        <div class="experience-card">
-          <div class="exp-accent"></div>
+        <div class="experience-card crt-box">
+          <span class="crt-box-label">REEL 01</span>
           <div class="exp-content">
             <div class="exp-header">
               <h3 data-i18n="exp_role">Desarrollador / Consultor Odoo</h3>
@@ -223,10 +266,10 @@
             </div>
 
             <div class="exp-metrics">
-              <span class="metric-chip"><i class="fas fa-puzzle-piece"></i> Módulos Custom</span>
-              <span class="metric-chip"><i class="fas fa-file-invoice-dollar"></i> CFDI México</span>
-              <span class="metric-chip"><i class="fas fa-university"></i> Multi-Banco</span>
-              <span class="metric-chip"><i class="fas fa-chart-bar"></i> Reportes Excel</span>
+              <span class="metric-chip">MÓDULOS CUSTOM</span>
+              <span class="metric-chip">CFDI MÉXICO</span>
+              <span class="metric-chip">MULTI-BANCO</span>
+              <span class="metric-chip">REPORTES EXCEL</span>
             </div>
 
             <ul class="exp-list">
@@ -247,7 +290,6 @@
 
             <button class="expand-toggle">
               <span data-i18n="show_more">Ver más</span>
-              <i class="fas fa-chevron-down"></i>
             </button>
 
             <div class="exp-tags">
@@ -266,12 +308,10 @@
         <div class="projects-list">
 
           <!-- P1 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p1_badge">Cobranza</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p1_title">Reporte Follow-Up · Días Vencidos</h3>
-                <span class="project-badge" data-i18n="p1_badge">Cobranza</span>
-              </div>
+              <h3 class="project-title" data-i18n="p1_title">Reporte Follow-Up · Días Vencidos</h3>
               <p class="project-desc" data-i18n="p1_desc">
                 El reporte estándar de Odoo no mostraba los días exactos de vencimiento de cada factura.
                 Módulo que agrega la columna "Días Vencidos" calculada dinámicamente con base en date_maturity,
@@ -284,12 +324,10 @@
           </div>
 
           <!-- P2 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p2_badge">Ventas</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p2_title">Sistema de Comisiones por Cobranza</h3>
-                <span class="project-badge" data-i18n="p2_badge">Ventas</span>
-              </div>
+              <h3 class="project-title" data-i18n="p2_title">Sistema de Comisiones por Cobranza</h3>
               <p class="project-desc" data-i18n="p2_desc">
                 Wizard que calcula comisiones de vendedores basadas en pagos recibidos — no en facturación —
                 con filtros por rango de fechas, identificación de pagos conciliados y base sin impuestos.
@@ -302,12 +340,10 @@
           </div>
 
           <!-- P3 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p3_badge">Nómina</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p3_title">Dispersión de Nómina — Multi-Banco México</h3>
-                <span class="project-badge" data-i18n="p3_badge">Nómina</span>
-              </div>
+              <h3 class="project-title" data-i18n="p3_title">Dispersión de Nómina — Multi-Banco México</h3>
               <p class="project-desc" data-i18n="p3_desc">
                 Módulos para generar archivos de dispersión bancaria compatibles con 7 bancos mexicanos.
                 Soporte para CLABE, cuenta y tarjeta. Generación automática de layout bancario en TXT y PDF.
@@ -323,12 +359,10 @@
           </div>
 
           <!-- P4 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p4_badge">Logística</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p4_title">Sistema de Entrega de Pedidos</h3>
-                <span class="project-badge" data-i18n="p4_badge">Logística</span>
-              </div>
+              <h3 class="project-title" data-i18n="p4_title">Sistema de Entrega de Pedidos</h3>
               <p class="project-desc" data-i18n="p4_desc">
                 Módulo que gestiona la entrega de pedidos por zonas desde inventario. Agrupa facturas por zona
                 y fecha, asigna chofer, valida que no se dupliquen entregas y genera hoja de ruta con firma
@@ -341,12 +375,10 @@
           </div>
 
           <!-- P5 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p5_badge">Ventas</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p5_title">Control de Cancelación de Pedidos</h3>
-                <span class="project-badge" data-i18n="p5_badge">Ventas</span>
-              </div>
+              <h3 class="project-title" data-i18n="p5_title">Control de Cancelación de Pedidos</h3>
               <p class="project-desc" data-i18n="p5_desc">
                 Validaciones que bloquean la cancelación de pedidos de venta cuando ya existen
                 entregas realizadas, facturas emitidas o pagos registrados, protegiendo la integridad del flujo comercial.
@@ -358,12 +390,10 @@
           </div>
 
           <!-- P6 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p6_badge">Fiscal</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p6_title">Reportes CFDI Personalizados</h3>
-                <span class="project-badge" data-i18n="p6_badge">Fiscal</span>
-              </div>
+              <h3 class="project-title" data-i18n="p6_title">Reportes CFDI Personalizados</h3>
               <p class="project-desc" data-i18n="p6_desc">
                 Personalización del reporte QWeb de facturas con layout corporativo, tabla de productos ajustada,
                 información SAT completa y campos adicionales para cumplimiento fiscal mexicano.
@@ -375,12 +405,10 @@
           </div>
 
           <!-- P7 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p7_badge">Cloud</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p7_title">Integración Google Drive + Odoo</h3>
-                <span class="project-badge" data-i18n="p7_badge">Cloud</span>
-              </div>
+              <h3 class="project-title" data-i18n="p7_title">Integración Google Drive + Odoo</h3>
               <p class="project-desc" data-i18n="p7_desc">
                 Integración entre Odoo y Google Drive para almacenamiento automático de documentos y adjuntos
                 generados desde el ERP, sin intervención manual del usuario.
@@ -392,12 +420,10 @@
           </div>
 
           <!-- P8 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p8_badge">Analytics</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p8_title">Suite de Reportes Financieros en Excel</h3>
-                <span class="project-badge" data-i18n="p8_badge">Analytics</span>
-              </div>
+              <h3 class="project-title" data-i18n="p8_title">Suite de Reportes Financieros en Excel</h3>
               <p class="project-desc" data-i18n="p8_desc">
                 Múltiples wizards para generar reportes Excel de compras, ventas, cobranza e inventario.
                 Consultas SQL optimizadas directamente en PostgreSQL para reportes de alto volumen.
@@ -409,12 +435,10 @@
           </div>
 
           <!-- P9 -->
-          <div class="project-card">
+          <div class="project-card crt-box">
+            <span class="crt-box-label" data-i18n="p9_badge">Personal</span>
             <div class="project-body">
-              <div class="project-top">
-                <h3 class="project-title" data-i18n="p9_title">Adivina la Bandera — PWA</h3>
-                <span class="project-badge" data-i18n="p9_badge">Personal</span>
-              </div>
+              <h3 class="project-title" data-i18n="p9_title">Adivina la Bandera — PWA</h3>
               <p class="project-desc" data-i18n="p9_desc">
                 Juego web de adivinanza de banderas construido como Progressive Web App: instalable en móvil,
                 con service worker y caché para funcionar sin conexión. Desplegado en GitHub Pages.
@@ -432,50 +456,50 @@
       <section id="skills" class="content-section">
         <h2 class="section-heading" data-i18n="skills_title">Habilidades Técnicas</h2>
 
-        <div class="skills-group">
-          <h3 class="skills-category" data-i18n="skills_cat1">ERP & Backend</h3>
+        <div class="skills-group crt-box">
+          <span class="crt-box-label" data-i18n="skills_cat1">ERP &amp; Backend</span>
           <div class="skills-chips">
-            <span class="skill-chip"><i class="fas fa-cube"></i> Odoo 16/17/18/19</span>
-            <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
-            <span class="skill-chip"><i class="fas fa-database"></i> PostgreSQL</span>
-            <span class="skill-chip"><i class="fas fa-table"></i> Odoo ORM</span>
-            <span class="skill-chip"><i class="fas fa-file-excel"></i> XLSXWriter</span>
-            <span class="skill-chip"><i class="fas fa-cloud"></i> Odoo.sh</span>
+            <span class="skill-chip">Odoo 16/17/18/19</span>
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">Odoo ORM</span>
+            <span class="skill-chip">XLSXWriter</span>
+            <span class="skill-chip">Odoo.sh</span>
           </div>
         </div>
 
-        <div class="skills-group">
-          <h3 class="skills-category" data-i18n="skills_cat2">Frontend & Vistas</h3>
+        <div class="skills-group crt-box">
+          <span class="crt-box-label" data-i18n="skills_cat2">Frontend &amp; Vistas</span>
           <div class="skills-chips">
-            <span class="skill-chip"><i class="fas fa-feather"></i> OWL</span>
-            <span class="skill-chip"><i class="fab fa-js"></i> JavaScript</span>
-            <span class="skill-chip"><i class="fas fa-paint-brush"></i> QWeb</span>
-            <span class="skill-chip"><i class="fab fa-html5"></i> XML Views</span>
+            <span class="skill-chip">OWL</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">QWeb</span>
+            <span class="skill-chip">XML Views</span>
           </div>
         </div>
 
-        <div class="skills-group">
-          <h3 class="skills-category" data-i18n="skills_cat3">Fiscal México</h3>
+        <div class="skills-group crt-box">
+          <span class="crt-box-label" data-i18n="skills_cat3">Fiscal México</span>
           <div class="skills-chips">
-            <span class="skill-chip"><i class="fas fa-file-invoice-dollar"></i> CFDI 4.0</span>
-            <span class="skill-chip"><i class="fas fa-code"></i> l10n_mx_edi</span>
-            <span class="skill-chip"><i class="fas fa-stamp"></i> Timbrado (SW sapien)</span>
-            <span class="skill-chip"><i class="fas fa-receipt"></i> Complementos de pago (REP)</span>
-            <span class="skill-chip"><i class="fas fa-scale-balanced"></i> PUE / PPD</span>
-            <span class="skill-chip"><i class="fas fa-vault"></i> Bóveda fiscal</span>
+            <span class="skill-chip">CFDI 4.0</span>
+            <span class="skill-chip">l10n_mx_edi</span>
+            <span class="skill-chip">Timbrado (SW sapien)</span>
+            <span class="skill-chip">Complementos de pago (REP)</span>
+            <span class="skill-chip">PUE / PPD</span>
+            <span class="skill-chip">Bóveda fiscal</span>
           </div>
         </div>
 
-        <div class="skills-group">
-          <h3 class="skills-category" data-i18n="skills_cat4">Herramientas & Infraestructura</h3>
+        <div class="skills-group crt-box">
+          <span class="crt-box-label" data-i18n="skills_cat4">Herramientas &amp; Infraestructura</span>
           <div class="skills-chips">
-            <span class="skill-chip"><i class="fab fa-git-alt"></i> Git</span>
-            <span class="skill-chip"><i class="fab fa-github"></i> GitHub</span>
-            <span class="skill-chip"><i class="fab fa-linux"></i> Linux (Ubuntu Server)</span>
-            <span class="skill-chip"><i class="fas fa-server"></i> Nginx</span>
-            <span class="skill-chip"><i class="fas fa-terminal"></i> Odoo Shell</span>
-            <span class="skill-chip"><i class="fas fa-plug"></i> APIs REST</span>
-            <span class="skill-chip"><i class="fab fa-google-drive"></i> Google Drive API</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">GitHub</span>
+            <span class="skill-chip">Linux (Ubuntu Server)</span>
+            <span class="skill-chip">Nginx</span>
+            <span class="skill-chip">Odoo Shell</span>
+            <span class="skill-chip">APIs REST</span>
+            <span class="skill-chip">Google Drive API</span>
           </div>
         </div>
       </section>
@@ -484,7 +508,8 @@
       <section id="education" class="content-section">
         <h2 class="section-heading" data-i18n="education_title">Formación</h2>
 
-        <div class="education-card">
+        <div class="education-card crt-box">
+          <span class="crt-box-label">UANL · FIME</span>
           <div class="education-header">
             <div class="education-details">
               <h3 data-i18n="edu_degree">Ingeniería en Tecnologías de Software</h3>
@@ -496,29 +521,27 @@
 
         <h3 class="subsection-heading" data-i18n="clients_heading">Sectores atendidos</h3>
         <div class="clients-grid">
-          <div class="client-chip"><i class="fas fa-industry"></i> <span data-i18n="sector_1">Manufactura industrial</span></div>
-          <div class="client-chip"><i class="fas fa-truck"></i> <span data-i18n="sector_2">Distribución y mayoreo</span></div>
-          <div class="client-chip"><i class="fas fa-gears"></i> <span data-i18n="sector_3">Refacciones y autopartes</span></div>
-          <div class="client-chip"><i class="fas fa-wheat-awn"></i> <span data-i18n="sector_4">Agroindustria</span></div>
-          <div class="client-chip"><i class="fas fa-store"></i> <span data-i18n="sector_5">Retail y comercio</span></div>
-          <div class="client-chip"><i class="fas fa-file-invoice-dollar"></i> <span data-i18n="sector_6">Servicios financieros</span></div>
-          <div class="client-chip"><i class="fas fa-boxes-stacked"></i> <span data-i18n="sector_7">Logística y almacenes</span></div>
-          <div class="client-chip"><i class="fas fa-laptop-code"></i> <span data-i18n="sector_8">Tecnología y servicios</span></div>
+          <div class="client-chip"><span data-i18n="sector_1">Manufactura industrial</span></div>
+          <div class="client-chip"><span data-i18n="sector_2">Distribución y mayoreo</span></div>
+          <div class="client-chip"><span data-i18n="sector_3">Refacciones y autopartes</span></div>
+          <div class="client-chip"><span data-i18n="sector_4">Agroindustria</span></div>
+          <div class="client-chip"><span data-i18n="sector_5">Retail y comercio</span></div>
+          <div class="client-chip"><span data-i18n="sector_6">Servicios financieros</span></div>
+          <div class="client-chip"><span data-i18n="sector_7">Logística y almacenes</span></div>
+          <div class="client-chip"><span data-i18n="sector_8">Tecnología y servicios</span></div>
         </div>
 
         <h3 class="subsection-heading" data-i18n="languages_heading">Idiomas</h3>
         <div class="certifications-list">
-          <div class="cert-card">
-            <div class="cert-icon"><i class="fas fa-language"></i></div>
+          <div class="cert-card crt-box">
+            <span class="crt-box-label" data-i18n="lang_spanish">Español</span>
             <div class="cert-info">
-              <h4 data-i18n="lang_spanish">Español</h4>
               <span class="cert-year" data-i18n="lang_spanish_level">Nativo</span>
             </div>
           </div>
-          <div class="cert-card">
-            <div class="cert-icon"><i class="fas fa-language"></i></div>
+          <div class="cert-card crt-box">
+            <span class="crt-box-label" data-i18n="lang_english">Inglés</span>
             <div class="cert-info">
-              <h4 data-i18n="lang_english">Inglés</h4>
               <span class="cert-year" data-i18n="lang_english_level">Intermedio-Avanzado (B2)</span>
             </div>
           </div>
@@ -536,23 +559,21 @@
 
         <div class="contact-links">
           <a href="mailto:iruegaspe@hotmail.com" class="contact-link-item">
-            <i class="fas fa-envelope"></i>
+            <span class="contact-proto">MAIL&gt;</span>
             <span>iruegaspe@hotmail.com</span>
-            <i class="fas fa-arrow-right contact-arrow"></i>
           </a>
           <a href="https://www.linkedin.com/in/pedro-iruegas-a8060035b/" target="_blank" class="contact-link-item">
-            <i class="fab fa-linkedin-in"></i>
+            <span class="contact-proto">LKDN&gt;</span>
             <span>linkedin.com/in/pedro-iruegas</span>
-            <i class="fas fa-arrow-right contact-arrow"></i>
           </a>
           <a href="https://github.com/pedroiruegas" target="_blank" class="contact-link-item">
-            <i class="fab fa-github"></i>
+            <span class="contact-proto">GHUB&gt;</span>
             <span>github.com/pedroiruegas</span>
-            <i class="fas fa-arrow-right contact-arrow"></i>
           </a>
         </div>
 
-        <form class="contact-form" id="form-contacto" action="https://formspree.io/f/xbdzgrbg" method="POST">
+        <form class="contact-form crt-box" id="form-contacto" action="https://formspree.io/f/xbdzgrbg" method="POST">
+          <span class="crt-box-label">CHANGE SHOW</span>
           <div class="form-row">
             <div class="form-group">
               <label for="nombre" data-i18n="form_name">Nombre</label>
@@ -580,15 +601,9 @@
       <!-- FOOTER -->
       <footer class="panel-footer">
         <div class="mobile-footer-social">
-          <a href="https://github.com/pedroiruegas" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:iruegaspe@hotmail.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/pedro-iruegas-a8060035b/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+          <a href="https://github.com/pedroiruegas" target="_blank" aria-label="GitHub">GITHUB</a>
+          <a href="mailto:iruegaspe@hotmail.com" aria-label="Email">EMAIL</a>
+          <a href="https://www.linkedin.com/in/pedro-iruegas-a8060035b/" target="_blank" aria-label="LinkedIn">LINKEDIN</a>
         </div>
         <p class="copyright">© 2026 Pedro Iruegas. <span data-i18n="copyright">Todos los derechos reservados.</span></p>
       </footer>
@@ -601,5 +616,21 @@
   <script src="js/ui.js"></script>
   <script src="js/interactions.js"></script>
   <script src="js/cursor.js"></script>
+  <script>
+    // Reloj de consola DATE / TIME
+    (() => {
+      const d = document.getElementById('consoleDate');
+      const t = document.getElementById('consoleTime');
+      if (!d || !t) return;
+      const pad = (n) => String(n).padStart(2, '0');
+      function tick() {
+        const now = new Date();
+        d.textContent = `DATE ${pad(now.getMonth() + 1)}/${pad(now.getDate())}/${String(now.getFullYear()).slice(-2)}`;
+        t.textContent = `TIME ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
 </body>
 </html>

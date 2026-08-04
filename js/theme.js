@@ -25,17 +25,9 @@
     });
   }
 
+  // 'day' = fósforo verde, 'night' (default) = fósforo ámbar
   const stored = localStorage.getItem('theme');
-  if (stored === 'day') {
-    applyTheme(true, false);
-  } else if (stored === 'night') {
-    applyTheme(false, false);
-  } else {
-    applyTheme(prefersLight.matches, false);
-    prefersLight.addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) applyTheme(e.matches, false);
-    });
-  }
+  applyTheme(stored === 'day', false);
 
   setupThemeToggle(document.getElementById('themeToggle'));
   setupThemeToggle(document.getElementById('themeToggleMobile'));

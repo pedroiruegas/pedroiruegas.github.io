@@ -50,23 +50,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!hidden) {
       const isLight = document.body.classList.contains('light');
-      const baseAlpha = isLight ? 0.03 : 0.055;
+      const glowRGB = isLight ? '53, 224, 101' : '242, 172, 24';
+      const baseAlpha = 0.055;
       const velBoost = velocity * 0.0003;
       const alpha = Math.min(baseAlpha + velBoost, 0.09);
       const radius = 550;
 
       const g1 = gCtx.createRadialGradient(gx, gy, 0, gx, gy, radius);
-      g1.addColorStop(0, `rgba(124, 106, 255, ${alpha})`);
-      g1.addColorStop(0.25, `rgba(124, 106, 255, ${alpha * 0.5})`);
-      g1.addColorStop(0.5, `rgba(124, 106, 255, ${alpha * 0.2})`);
-      g1.addColorStop(0.75, `rgba(124, 106, 255, ${alpha * 0.05})`);
+      g1.addColorStop(0, `rgba(${glowRGB}, ${alpha})`);
+      g1.addColorStop(0.25, `rgba(${glowRGB}, ${alpha * 0.5})`);
+      g1.addColorStop(0.5, `rgba(${glowRGB}, ${alpha * 0.2})`);
+      g1.addColorStop(0.75, `rgba(${glowRGB}, ${alpha * 0.05})`);
       g1.addColorStop(1, 'transparent');
       gCtx.fillStyle = g1;
       gCtx.fillRect(0, 0, w, h);
 
       const g2 = gCtx.createRadialGradient(gx, gy, 0, gx, gy, 120);
-      g2.addColorStop(0, `rgba(124, 106, 255, ${isLight ? 0.02 : 0.03})`);
-      g2.addColorStop(0.5, `rgba(124, 106, 255, 0.01)`);
+      g2.addColorStop(0, `rgba(${glowRGB}, 0.03)`);
+      g2.addColorStop(0.5, `rgba(${glowRGB}, 0.01)`);
       g2.addColorStop(1, 'transparent');
       gCtx.fillStyle = g2;
       gCtx.fillRect(0, 0, w, h);

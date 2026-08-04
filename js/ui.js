@@ -61,14 +61,14 @@
     hamburger.addEventListener('click', () => {
       const isOpen = mobileNav.classList.toggle('active');
       hamburger.innerHTML = isOpen
-        ? '<i class="fas fa-times"></i>'
-        : '<i class="fas fa-bars"></i>';
+        ? 'CLOSE'
+        : 'MENU';
     });
 
     document.querySelectorAll('.mobile-nav-link').forEach((link) => {
       link.addEventListener('click', () => {
         mobileNav.classList.remove('active');
-        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+        hamburger.innerHTML = 'MENU';
       });
     });
   }

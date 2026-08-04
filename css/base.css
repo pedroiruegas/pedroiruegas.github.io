@@ -1,37 +1,41 @@
 /* ============================================
-   VARIABLES & RESET
+   VARIABLES & RESET — CONSOLA GSTC (fósforo ámbar)
    ============================================ */
 :root {
-  --bg: #0a0a0b;
-  --bg-secondary: #111113;
-  --bg-tertiary: #18181b;
-  --border: rgba(255, 255, 255, 0.06);
-  --text: #fafafa;
-  --text-secondary: #a1a1aa;
-  --accent: #7c6aff;
-  --accent-hover: #a598ff;
-  --accent-dim: rgba(124, 106, 255, 0.1);
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
-  --radius: 12px;
-  --radius-sm: 8px;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --font: 'Space Mono', 'Fira Code', monospace;
-  --font-heading: 'Syne', 'Inter', sans-serif;
+  /* Fósforo ámbar */
+  --bg: #0b0c0e;               /* negro de pantalla */
+  --bg-secondary: #101114;
+  --bezel: #14161a;            /* bisel del monitor */
+  --phos: #f2ac18;             /* fósforo principal */
+  --phos-bright: #ffd351;      /* brillo / hover */
+  --phos-dim: #8a651c;         /* elementos deshabilitados (STOP) */
+  --phos-faint: rgba(242, 172, 24, 0.12);
+  --phos-glow: rgba(242, 172, 24, 0.45);
+  --led: #46ff7c;              /* LEDs del bisel */
+  --ink: #0b0c0e;              /* texto sobre barras invertidas */
+
+  --border-w: 2px;
+  --transition: 0.2s ease;
+
+  --font: 'IBM Plex Mono', 'Courier New', monospace;
+  --font-display: 'Courier Prime', 'Courier New', monospace;
+  --font-digits: 'VT323', 'Courier New', monospace;
+
+  /* alias de compatibilidad */
+  --text: var(--phos);
+  --text-secondary: var(--phos-dim);
+  --accent: var(--phos);
+  --border: rgba(242, 172, 24, 0.35);
 }
 
+/* Modo fósforo verde (toggle PHOSPHOR) */
 body.light {
-  --bg: #fafafa;
-  --bg-secondary: #f4f4f5;
-  --bg-tertiary: #e4e4e7;
-  --border: rgba(0, 0, 0, 0.08);
-  --text: #18181b;
-  --text-secondary: #52525b;
-  --accent: #5b4fcf;
-  --accent-hover: #7c6aff;
-  --accent-dim: rgba(91, 79, 207, 0.1);
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+  --phos: #35e065;
+  --phos-bright: #8dffab;
+  --phos-dim: #1f8a41;
+  --phos-faint: rgba(53, 224, 101, 0.12);
+  --phos-glow: rgba(53, 224, 101, 0.45);
+  --led: #f2ac18;
 }
 
 *, *::before, *::after {
@@ -44,89 +48,197 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font);
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
+  background-color: var(--bezel);
+  color: var(--phos);
+  line-height: 1.65;
   overflow-x: hidden;
-  transition: background-color 0.4s ease, color 0.3s ease;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
+  text-shadow: 0 0 6px var(--phos-glow);
 }
 
-body::before {
-  content: '';
+/* Pantalla dentro del bisel */
+.layout { background-color: var(--bg); }
+
+/* Scanlines CRT */
+.crt-scanlines {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 9990;
   pointer-events: none;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.22) 3px
+  );
+  mix-blend-mode: multiply;
 }
 
-body.light::before {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
-}
-
-body::after {
-  content: '';
+/* Viñeta / cristal curvo */
+.crt-vignette {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 9991;
   pointer-events: none;
-  opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background:
+    radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(0, 0, 0, 0) 55%,
+      rgba(0, 0, 0, 0.42) 100%);
+}
+
+/* Parpadeo sutil de fósforo */
+@keyframes phosflicker {
+  0%, 100% { opacity: 1; }
+  92%      { opacity: 1; }
+  93%      { opacity: 0.96; }
+  94%      { opacity: 1; }
+}
+.layout { animation: phosflicker 7s infinite steps(1); }
+
+@keyframes blink {
+  0%, 49%  { opacity: 1; }
+  50%, 100% { opacity: 0.15; }
+}
+.blink { animation: blink 1.1s infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .layout { animation: none; }
+  .blink { animation: none; }
+  *, *::before, *::after { transition: none !important; animation-duration: 0.001s !important; }
+}
+
+/* LEDs verdes del bisel */
+.bezel-leds {
+  position: fixed;
+  left: 6px;
+  top: 18vh;
+  z-index: 9992;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+.led {
+  width: 7px;
+  height: 14px;
+  background: var(--led);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--led), 0 0 16px var(--led);
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
   font-weight: 700;
-  line-height: 1.2;
-  color: var(--text);
+  line-height: 1.25;
+  color: var(--phos);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: color var(--transition);
+  transition: color var(--transition), background var(--transition);
+}
+a:hover { color: var(--phos-bright); }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px dashed var(--phos-bright);
+  outline-offset: 2px;
 }
 
-img { max-width: 100%; height: auto; display: block; }
+img { max-width: 100%; height: auto; display: block; filter: sepia(1) saturate(3) hue-rotate(-12deg); }
 
 ul { list-style: none; }
 
-.accent { color: var(--accent); }
+.accent, .tm { color: var(--phos-bright); }
+.tm { font-size: 0.55em; vertical-align: super; }
+
+strong { color: var(--phos-bright); font-weight: 600; }
 
 code {
   font-family: var(--font);
   font-size: 0.82em;
-  color: var(--accent);
-  background: var(--accent-dim);
+  color: var(--phos-bright);
+  background: var(--phos-faint);
   padding: 0.1em 0.35em;
-  border-radius: 4px;
 }
+
+::selection { background: var(--phos); color: var(--ink); text-shadow: none; }
+
+/* Scrollbar de consola */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--phos-dim); border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--phos); }
+
+/* ============================================
+   CAJA CRT (fieldset estilo "SHOW INFORMATION")
+   ============================================ */
+.crt-box {
+  position: relative;
+  border: var(--border-w) solid var(--phos);
+  padding: 1.1rem 1rem 0.9rem;
+  background: var(--bg);
+}
+.crt-box-label {
+  position: absolute;
+  top: -0.72em;
+  left: 12px;
+  background: var(--bg);
+  padding: 0 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  max-width: calc(100% - 24px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Barra de estado en video invertido */
+.status-bar {
+  background: var(--phos);
+  color: var(--ink);
+  text-shadow: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  padding: 0.45rem 0.7rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+}
+.status-bar .status-key { opacity: 0.75; }
+
+/* Language switcher (compartido) */
 .language-switcher {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.35rem;
   align-items: center;
 }
 .language-btn {
   background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  border: var(--border-w) solid var(--phos);
+  color: var(--phos);
+  padding: 0.2rem 0.55rem;
   font-size: 0.7rem;
-  font-family: var(--font);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 0.05em;
-}
-.language-btn:hover {
-  color: var(--text);
-  border-color: var(--text-secondary);
-}
-.language-btn.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+  font-family: var(--font-display);
   font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 6px var(--phos-glow);
+}
+.language-btn:hover { color: var(--phos-bright); border-color: var(--phos-bright); }
+.language-btn.active {
+  background: var(--phos);
+  border-color: var(--phos);
+  color: var(--ink);
+  text-shadow: none;
 }
